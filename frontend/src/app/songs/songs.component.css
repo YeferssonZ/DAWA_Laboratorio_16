@@ -1,0 +1,231 @@
+/* Estilos generales */
+.app-container::before {
+    content: "";
+    background: url('https://images3.alphacoders.com/133/1331008.png') no-repeat center center fixed;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+/* Estilos del encabezado */
+.app-container header {
+    background: rgba(0, 0, 0, 0.7);
+    color: #ff3399;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.app-container header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    /* Cambiar por la fuente deseada */
+}
+
+.app-container header .header-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.app-container header .btn-upload,
+.app-container header .btn-logout {
+    display: inline-block;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.app-container header .btn-upload:hover,
+.app-container header .btn-logout:hover {
+    transform: scale(1.03);
+}
+
+.app-container header .btn-upload {
+    background: #ff3399;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.app-container header .btn-logout {
+    background: #ff0055;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilos del formulario */
+.app-container form {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    /* Centra el formulario horizontalmente */
+    align-items: center;
+    /* Centra el formulario verticalmente */
+}
+
+.app-container form .form-group {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.app-container form label {
+    color: #fff;
+}
+
+.app-container form input {
+    background: #333;
+    color: #fff;
+    border: 1px solid #555;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+.app-container form input::placeholder {
+    color: #bbb3b3; /* Cambia a tu color deseado */
+}
+
+
+.app-container form button {
+    background: #ef42e1;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    align-self: flex-end;
+}
+
+.app-container form button:hover {
+    background: #0056b3;
+    color: #fff;
+    transform: scale(1.03);
+}
+
+/* Estilos de las canciones */
+.app-container .song-list .song-item {
+    border: 1px solid #ccc;
+    padding: 25px;
+    margin: 25px auto;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    /* Ajusta el ancho de la caja */
+}
+
+
+.app-container .song-list .song-item:hover {
+    background: #c70dc4;
+    color: #fff;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para el contenido de .song-item */
+.app-container .song-list .song-item .song-content {
+    display: flex;
+    align-items: center;
+}
+
+.app-container .song-list .song-item .song-thumbnail img {
+    max-width: 70px;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.app-container .song-list .song-item .song-details {
+    flex-grow: 1;
+}
+
+.app-container .song-list .song-item .song-details .song-title {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+
+.app-container .song-list .song-item .song-details .song-artist {
+    font-size: 1.2em;
+    color: #ccc;
+}
+
+/* Estilos para los botones dentro de .song-item */
+.app-container .song-list .song-item .song-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.app-container .song-list .song-item .song-buttons button {
+    margin-right: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.app-container .song-list .song-item .song-buttons .btn-play {
+    background-color: #9428a7;
+    color: #fff;
+}
+
+.app-container .song-list .song-item .song-buttons .btn-edit {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.app-container .song-list .song-item .song-buttons .btn-delete {
+    background-color: #f6043c;
+    color: #fff;
+}
+
+.app-container .song-list .song-item .song-buttons button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    transform: scale(1.03);
+}
+
+
+
+/* Estilos del pie de página */
+.app-container footer {
+    background: rgba(0, 0, 0, 0.7);
+    color: #ff3399;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+    font-size: 1.2em; /* Ajusta el tamaño de letra según sea necesario */
+    font-weight: bold; /* Hace el texto en negrita */
+    font-family: 'Roboto', sans-serif;
+}
+

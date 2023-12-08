@@ -1,0 +1,104 @@
+/* Estilos para el contenedor principal */
+.app-container::before {
+    content: "";
+    background: url('https://images7.alphacoders.com/134/1342051.png') no-repeat center center fixed;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    color: #fff; /* Color de texto principal */
+}
+
+/* Estilos para el formulario de inicio de sesión */
+.app-container .login-form {
+    background: rgba(51, 51, 51, 0.9); /* Fondo oscuro con transparencia */
+    color: #ffd700; /* Color de texto en el contenedor */
+    border-radius: 10px;
+    width: 400px; /* Ancho fijo */
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/* Estilos para las etiquetas de entrada */
+.app-container label {
+    display: block;
+    margin-top: 10px;
+    color: #ffd700; /* Color dorado */
+    font-weight: bold;
+}
+
+/* Estilos para los campos de entrada de texto y de contraseña */
+.app-container input[type="text"],
+.app-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ffd700; /* Borde dorado del campo de entrada */
+    background: rgba(0, 0, 0, 0.7); /* Fondo oscuro con transparencia */
+    color: #fff;
+    border-radius: 5px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* Estilos para el botón de inicio de sesión */
+.app-container button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ffd700; /* Fondo dorado */
+    color: #000; /* Color de texto en el botón */
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.app-container button:hover {
+    background: #ffd700; /* Mantén el fondo dorado al pasar el mouse */
+    color: #fff; /* Cambia el color de texto al pasar el mouse */
+    transform: scale(1.03);
+}
+
+/* Estilos para el mensaje de error */
+.app-container .alert {
+    background-color: #8f0e0e;
+    color: #fff;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Estilos para el título */
+.app-container .login-title {
+    text-align: center;
+    color: #ffd700; /* Color dorado */
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    font-family: 'Arial', sans-serif; /* Cambia 'Arial' por el tipo de letra que desees */
+}
+
+/* Estilos para el enlace "Regístrate aquí" */
+.app-container .register-link a {
+    color: #ff0048; /* Color dorado */
+    text-decoration: underline;
+}
+
+.app-container .register-link a:hover {
+    color: #fff; /* Cambia el color al pasar el mouse */
+}

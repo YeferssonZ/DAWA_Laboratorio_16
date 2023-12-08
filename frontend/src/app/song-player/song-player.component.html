@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<div class="app-container">
+  <div class="info-container">
+    <h2>{{ song.title }}</h2>
+    <p>{{ song.artist }}</p>
+    <img [src]="song.logoUrl" alt="Song Logo" class="img-thumbnail mb-3" style="max-width: 300px;">
+  </div>
+
+  <!-- Reproductor de audio personalizado -->
+  <div class="custom-audio-player">
+    <audio #audioPlayer [src]="song.audioUrl" (timeupdate)="updateTime()" (loadedmetadata)="updateTotalTime()"></audio>
+
+    <div class="audio-controls">
+        <div class="time-controls">
+            <span>{{ formatTime(currentTime) }}</span>
+            <input type="range" [value]="(currentTime / totalTime) * 100" (input)="seekTo($event)" max="100">
+            <span>{{ formatTime(totalTime) }}</span>
+        </div>
+
+        <div class="speed-controls">
+            <button (click)="resetSpeed()">
+                <i class="fas fa-history"></i>
+            </button>
+            <button (click)="adjustSpeed(0.75)">
+                <i class="fa fa-backward"></i>
+            </button>
+            <button (click)="playPause()">
+                <i class="fa" [ngClass]="{'fa-pause': isPlaying, 'fa-play': !isPlaying}"></i>
+            </button>
+            <button (click)="adjustSpeed(1.25)">
+                <i class="fa fa-forward"></i>
+            </button>
+            <button (click)="download()">
+                <i class="fa fa-download"></i>
+            </button>
+        </div>
+
+        <div class="volume-controls">
+            <button (click)="toggleMute()">
+                <i class="fa" [ngClass]="{'fa-volume-up': !isMuted, 'fa-volume-off': isMuted}"></i>
+            </button>
+            <input type="range" [value]="volume" (input)="setVolume($event)" max="100">
+        </div>
+    </div>
+
+    <button class="btn btn-volver custom-btn" (click)="goToSongs()">Volver a Canciones</button>
+</div>
+
+
+</div>

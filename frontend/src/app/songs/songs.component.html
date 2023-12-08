@@ -1,0 +1,41 @@
+<div class="app-container">
+  <header>
+    <button (click)="logout()" class="btn-logout">Cerrar Sesión</button>
+    <h1 (click)="refreshPage()">Music Player</h1>
+    <div class="header-buttons">
+      <button routerLink="/upload" class="btn-upload">Subir Canción</button>
+    </div>
+  </header>
+
+  <form (ngSubmit)="searchSongs()" [formGroup]="searchForm" class="form-inline mb-3">
+    <div class="form-group mr-2">
+      <label for="searchQuery" class="sr-only"></label>
+      <input type="text" class="form-control" id="searchQuery" placeholder="Buscar canciones" formControlName="searchQuery">
+    </div>
+    <button type="submit" class="btn btn-primary">Buscar</button>
+  </form>
+
+  <ul class="song-list">
+    <li *ngFor="let song of displayedSongs" class="song-item">
+      <div class="song-content">
+        <div class="song-thumbnail">
+          <img [src]="song.logoUrl" alt="Song Thumbnail">
+        </div>
+        <div class="song-details">
+          <div class="song-title">{{ song.title }}</div>
+          <div class="song-artist">{{ song.artist }}</div>
+        </div>
+      </div>
+      <div class="song-buttons">
+        <button (click)="playSong(song._id)" class="btn btn-success btn-play">Reproducir</button>
+        <button (click)="editSong(song)" class="btn btn-primary btn-edit">Editar</button>
+        <button (click)="deleteSong(song)" class="btn btn-danger btn-delete">Eliminar</button>
+      </div>
+    </li>
+  </ul>
+  
+
+  <footer>
+    <p>Music Player - Laboratorio 13 @2023</p>
+  </footer>
+</div>

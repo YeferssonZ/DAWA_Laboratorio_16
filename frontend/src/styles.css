@@ -1,0 +1,58 @@
+/* Estilos avanzados para ngx-toastr */
+
+/* Contenedor del toast */
+.toast-container {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    right: 0;
+    width: 100%;
+}
+
+/* Estilo del toast individual */
+.custom-toast {
+    margin: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background-color: rgba(139, 0, 0, 0.8); /* Guinda con transparencia */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo del botón de cerrar */
+.toast-close-button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    color: #fff;
+    margin-left: 10px;
+}
+
+/* Estilo del icono de éxito */
+.toast-success {
+    background-color: #228B22; /* Verde oscuro */
+}
+
+/* Estilo del icono de error */
+.toast-error {
+    background-color: #dc3545; /* Rojo oscuro */
+}
+
+/* Estilo de la barra de progreso */
+.toast-progress {
+    height: 5px;
+    background-color: #fff; /* Blanco */
+}
+
+/* Estilo del mensaje del toast */
+.toast-message {
+    color: #fff; /* Color del texto del mensaje */
+    font-size: 16px; /* Tamaño de fuente del mensaje */
+    font-weight: bold; /* Peso de fuente del mensaje */
+}
+
+
